@@ -129,8 +129,7 @@ h4.text-gray i {
     border: none !important;
     border-radius: 16px !important;
     box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
-    height: auto !important;
-    min-height: 96px;
+    height: 100px !important;
     padding: 20px !important;
     margin-bottom: 24px !important;
     margin-top: 0 !important;
@@ -187,6 +186,7 @@ h4.text-gray i {
     margin-left: 0 !important;
     flex: 1;
     padding-right: 5px;
+    min-width: 0; /* Enable text truncation in flex container */
 }
 
 .xe-user-name {
@@ -196,6 +196,9 @@ h4.text-gray i {
     color: #333;
     margin-bottom: 6px;
     transition: color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .box2:hover .xe-user-name {
