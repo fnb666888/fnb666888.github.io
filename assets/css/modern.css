@@ -1,0 +1,278 @@
+/* Modern UI Redesign */
+
+:root {
+    --primary-color: #2c2e3e; /* Dark elegant blue */
+    --accent-color: #5d78ff; /* Vibrant Blue/Purple */
+    --bg-color: #f7f9fc;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #888888;
+    --sidebar-width: 280px;
+    --transition-speed: 0.3s;
+}
+
+body.page-body {
+    background-color: var(--bg-color) !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    color: var(--text-color) !important;
+}
+
+/* Sidebar Redesign */
+.sidebar-menu {
+    background: #ffffff !important;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+    border-right: none !important;
+    width: var(--sidebar-width) !important;
+}
+
+.sidebar-menu .logo-env {
+    border-bottom: 1px solid rgba(0,0,0,0.03) !important;
+    padding: 30px 30px !important;
+    background: #fff;
+}
+
+.sidebar-menu .main-menu {
+    padding-top: 20px !important;
+}
+
+.sidebar-menu .main-menu > li > a {
+    color: #6c7293 !important;
+    font-weight: 500;
+    padding: 14px 30px !important;
+    transition: all var(--transition-speed);
+    border-radius: 0 30px 30px 0;
+    margin-right: 15px;
+}
+
+.sidebar-menu .main-menu > li > a:hover {
+    background-color: rgba(93, 120, 255, 0.05) !important;
+    color: var(--accent-color) !important;
+}
+
+.sidebar-menu .main-menu > li.active > a {
+    background-color: rgba(93, 120, 255, 0.1) !important;
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+
+.sidebar-menu .main-menu > li > ul {
+    background: transparent !important;
+}
+
+.sidebar-menu .main-menu > li > ul > li > a {
+    padding-left: 60px !important;
+    color: #888 !important;
+}
+
+.sidebar-menu .main-menu > li > ul > li > a:hover {
+    color: var(--accent-color) !important;
+}
+
+.sidebar-menu .main-menu > li > a i {
+    color: inherit !important;
+    margin-right: 12px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.main-content {
+    background-color: var(--bg-color) !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+/* Navbar */
+.user-info-navbar {
+    background-color: transparent !important;
+    margin-bottom: 20px !important;
+    border-bottom: none !important;
+    padding: 15px 0 !important;
+}
+
+.user-info-navbar .user-info-menu > li > a {
+    color: #6c7293 !important;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
+.user-info-navbar .user-info-menu > li > a:hover {
+    color: var(--accent-color) !important;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Section Headers */
+h4.text-gray {
+    color: #2c2e3e !important;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+h4.text-gray i {
+    color: var(--accent-color);
+    background: rgba(93, 120, 255, 0.1);
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-right: 12px !important;
+}
+
+/* Cards (Box2) Redesign */
+.box2 {
+    background-color: var(--card-bg);
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03) !important;
+    height: auto !important;
+    min-height: 96px;
+    padding: 20px !important;
+    margin-bottom: 24px !important;
+    margin-top: 0 !important;
+    display: flex;
+    align-items: center;
+    transition: all var(--transition-speed) cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.box2:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 30px rgba(93, 120, 255, 0.15) !important;
+}
+
+/* Add a subtle highlight bar on hover */
+.box2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: var(--accent-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.box2:hover::before {
+    opacity: 1;
+}
+
+.xe-comment-entry {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.xe-comment-entry img {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important; /* Squircle */
+    margin-right: 18px !important;
+    float: none !important;
+    padding: 0 !important;
+    background: #fff;
+    object-fit: contain;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.xe-comment {
+    position: static !important;
+    transform: none !important;
+    margin-left: 0 !important;
+    flex: 1;
+    padding-right: 5px;
+}
+
+.xe-user-name {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+    transition: color 0.2s;
+}
+
+.box2:hover .xe-user-name {
+    color: var(--accent-color);
+}
+
+.xe-comment p {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    margin: 0 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Tooltip adjustments */
+.tooltip-inner {
+    background-color: var(--primary-color) !important;
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: var(--primary-color) !important;
+}
+
+/* Scrollbar beautification */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Collapsed Sidebar Fixes */
+.sidebar-menu.collapsed {
+    width: 80px !important;
+}
+
+.sidebar-menu.collapsed .main-menu > li > a {
+    padding: 14px 0 !important;
+    text-align: center;
+}
+
+.sidebar-menu.collapsed .main-menu > li > a i {
+    margin-right: 0 !important;
+    width: 100%;
+    display: block;
+    font-size: 20px;
+}
+
+.sidebar-menu.collapsed .main-menu > li > a span {
+    display: none !important;
+}
+
+.sidebar-menu.collapsed .logo-env {
+    padding: 20px 0 !important;
+    text-align: center;
+}
+
+.sidebar-menu.collapsed .logo-env .logo-expanded {
+    display: none !important;
+}
+
+.sidebar-menu.collapsed .logo-env .logo-collapsed {
+    display: block !important;
+}
